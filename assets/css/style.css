@@ -9,37 +9,31 @@ body {
     background-attachment: fixed;
   }
 
+  :root {
+    --transformCardFront: none;
+    --displayImg: grid;
+    --heightCardFront: 350px;
+    --boxShadow: none;
+  }
+
+  .clicked {
+    --transformCardFront: rotateX(160deg); 
+    --displayImg: none;
+    --heightCardFront: 300px;
+    --boxShadow: inset 30px 20px 100px rgba(0,0,0,.15), 0 10px 100px rgba(0,0,0,0.3);
+  }
 
   /*Create the card container*/
   .birthdayCard {
     position: relative;
     width: 600px;
     height:350px;
-    cursor: pointer;
     transform-style: preserve-3d;
     transform: perspective(2500px);
     transition: 4s;
+    box-shadow: var(--boxShadow);
   }
   
-  .birthdayCard:hover {
-    transform: perspective(2500px);
-    box-shadow: inset 30px 20px 100px rgba(0,0,0,.15), 0 10px 100px rgba(0,0,0,0.3);
-  }
-  
-  .birthdayCard:hover .cardFront {
-    transform: rotateX(160deg); 
-    height: 300px;
-  }
-  
-  .birthdayCard:hover .front-text {
-    display: none;
-  }
-  
-  .birthdayCard:hover .img {
-    display: none;
-  }
-  
-
   /*Style the front of the card*/
   .cardFront {
     display: flex;
@@ -48,9 +42,10 @@ body {
     position: relative;
     background-color: white;
     width: 600px;
-    height:350px;
+    height: var(--heightCardFront);
     overflow: hidden;
     transform-origin: top;
+    transform: var(--transformCardFront);
     box-shadow: inset 30px 10px 100px rgba(0,0,0,.13), 30px 0 50px rgba(0,0,0,0.1);
     transition: .4s;
   }
@@ -92,7 +87,7 @@ body {
   }
   
   .img {
-    display: grid;
+    display: var(--displayImg);
   }
 
   .click {
@@ -103,6 +98,7 @@ body {
     background:rgba(227, 192, 246, 0.35);
     backdrop-filter: blur(4px);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.582);
+    cursor: pointer;
   }
 
   .inside-text {
@@ -124,4 +120,9 @@ body {
   
   .name {
     margin-left:150px;
+  }
+
+  .button {
+    display: flex;
+    margin-top: 50px;
   }
