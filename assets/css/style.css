@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height:135vh;
+    height:130vh;
     background-image: url(../images/back-lilas-1.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -12,8 +12,9 @@ body {
 
   :root {
     --transformCardFront: none;
-    --displayImg: grid;
+    --displayImg: flex;
     --heightCardFront: 350px;
+    --heightCardFront2: 280px;
     --boxShadow: none;
     --buttonMarginTop: 50px;
   }
@@ -21,7 +22,8 @@ body {
   .clicked {
     --transformCardFront: rotateX(160deg); 
     --displayImg: none;
-    --heightCardFront: 300px;
+    --heightCardFront: 275px;
+    --heightCardFront2: 230px;
     --boxShadow: inset 30px 20px 100px rgba(0,0,0,.15), 0 10px 100px rgba(0,0,0,0.3);
     --buttonMarginTop: 100px;
   }
@@ -36,7 +38,11 @@ body {
     transition: 4s;
     box-shadow: var(--boxShadow);
   }
-  
+
+  .img {
+    display: var(--displayImg);
+  }
+
   /*Style the front of the card*/
   .cardFront {
     display: flex;
@@ -50,9 +56,9 @@ body {
     transform-origin: top;
     transform: var(--transformCardFront);
     box-shadow: inset 30px 10px 100px rgba(0,0,0,.13), 30px 0 50px rgba(0,0,0,0.1);
-    transition: .4s;
+    transition: .6s;
   }
-  
+
   .happy, .toyou {
     position: relative;
     font-family: didot;
@@ -89,10 +95,6 @@ body {
     box-shadow: inset 30px 5px 100px rgba(0,0,0,0.2);
   }
   
-  .img {
-    display: var(--displayImg);
-  }
-
   .inside-text {
     position: relative;
     top:-160px;
@@ -109,10 +111,6 @@ body {
     font-family: 'Brush Script MT';
     color: #333;
   }
-  
-  .name {
-    margin-left:150px;
-  }
 
   .button {
     margin-top: 50px;
@@ -127,4 +125,27 @@ body {
     backdrop-filter: blur(4px);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.582);
     cursor: pointer;
+  }
+
+  @media screen and (min-width: 300px) and (max-width: 720px) {
+    .birthdayCard {
+      width: 380px;
+      height: 280px;
+    }
+
+    .cardFront {
+      width: 380px;
+      height: var(--heightCardFront2);
+    }
+
+    .cardInside {
+      width: 380px;
+      height:280px;
+    }
+
+    .img {
+      width: 300px;
+      height: 300px;
+      display: var(--displayImg);
+    }
   }
