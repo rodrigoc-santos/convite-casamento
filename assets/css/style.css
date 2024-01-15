@@ -17,6 +17,7 @@ body {
     --heightCardFront2: 280px;
     --boxShadow: none;
     --buttonMarginTop: 50px;
+    --displayCountdown: none;
   }
 
   .clicked {
@@ -26,6 +27,7 @@ body {
     --heightCardFront2: 230px;
     --boxShadow: inset 30px 20px 100px rgba(0,0,0,.15), 0 10px 100px rgba(0,0,0,0.3);
     --buttonMarginTop: 100px;
+    --displayCountdown: flex;
   }
 
   /*Create the card container*/
@@ -148,4 +150,29 @@ body {
       height: 300px;
       display: var(--displayImg);
     }
+  }
+
+  #countdow-container {
+    display: var(--displayCountdown);
+    flex-wrap: wrap;
+    justify-content: center; 
+    margin-top: 4.5rem; 
+  }
+
+  .text {
+    font-weight: bold;
+    font-size: 4rem;
+    line-height: 1;
+    margin: 1rem 2rem;
+  }
+
+  .countdow {
+    text-align: center;
+    border: solid 1px red;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .countdow span {
+    font-size: 1.3rem;
   }
