@@ -168,11 +168,18 @@ body {
 
   .countdow {
     text-align: center;
-    border: solid 1px red;
     margin-left: 15px;
     margin-right: 15px;
   }
 
   .countdow span {
     font-size: 1.3rem;
+  }
+
+  @media screen and (min-width: 300px) and (max-width: 720px) {
+    .text {
+      font-size: 1.5rem;
+      line-height: 0.7;
+      margin: 1rem 2rem;
+    }
   }
