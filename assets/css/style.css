@@ -1,9 +1,14 @@
+@font-face {
+  font-family: 'Bela';
+  src: url(../fonts/bela-yasmine.ttf);
+}
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height:130vh;
+    height:180vh;
     background-image: url(../images/back-lilas-1.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -13,7 +18,7 @@ body {
   :root {
     --transformCardFront: none;
     --displayImg: flex;
-    --heightCardFront: 350px;
+    --heightCardFront: 400px;
     --heightCardFront2: 280px;
     --boxShadow: none;
     --buttonMarginTop: 50px;
@@ -21,11 +26,11 @@ body {
   }
 
   .clicked {
-    --transformCardFront: rotateX(160deg); 
+    --transformCardFront: rotateX(160deg);
     --displayImg: none;
-    --heightCardFront: 275px;
+    --heightCardFront: 350px;
     --heightCardFront2: 230px;
-    --boxShadow: inset 30px 20px 100px rgba(0,0,0,.15), 0 10px 100px rgba(0,0,0,0.3);
+    --boxShadow: inset 20px 10px 90px rgba(0,0,0,.15), 0 10px 90px rgba(0,0,0,0.3);
     --buttonMarginTop: 100px;
     --displayCountdown: flex;
   }
@@ -34,7 +39,7 @@ body {
   .birthdayCard {
     position: relative;
     width: 600px;
-    height:350px;
+    height:400px;
     transform-style: preserve-3d;
     transform: perspective(2500px);
     transition: 4s;
@@ -51,67 +56,68 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: white;
+    background-image: url(../images/background-lavanda3.png);
     width: 600px;
     height: var(--heightCardFront);
     overflow: hidden;
     transform-origin: top;
     transform: var(--transformCardFront);
-    box-shadow: inset 30px 10px 100px rgba(0,0,0,.13), 30px 0 50px rgba(0,0,0,0.1);
+    box-shadow: inset 20px 10px 90px rgba(0,0,0,.13), 20px 0 40px rgba(0,0,0,0.1);
     transition: .6s;
-  }
-
-  .happy, .toyou {
-    position: relative;
-    font-family: didot;
-    text-align: center;
-    backface-visibility: hidden;
-    font-size: 30px; 
-  }
-  
-  .happy {
-    top:198px;
-  }
-  
-  .toyou {
-    top:123px;
-  }
-  
-  .bday {
-    position: relative;
-    font-family: arial;
-    font-size: 30px;
-    text-align: center;
-    top:163px;
   }
   
   /*Style the inside part of the card*/
   .cardInside {
     position: absolute;
-    background-color: #fff;
+    background-image: url(../images/background-lavanda3.png);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.6);
     width: 600px;
-    height:350px;
+    height:400px;
     z-index:-1;
     left:0;
     top:0;
-    box-shadow: inset 30px 5px 100px rgba(0,0,0,0.2);
+    box-shadow: inset 20px 5px 90px rgba(0,0,0,0.2);
   }
+  
   
   .inside-text {
     position: relative;
-    top:-160px;
-    transform: scale(0.7);
+    transform: scale(0.9);
+    display: flex;
+    flex-direction: column;
   }
   
-  .wishes {
+  .verse {
     position: relative;
-    top:-100px;
-    margin: 25px;
+    top: -16px;
+    width: 490px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
-  
-  p {
-    font-family: 'Brush Script MT';
-    color: #333;
+
+  #BRint {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    position: relative;
+    top: -60px;
+  }
+
+  h1 {
+    margin: auto;
+    position: relative;
+    top: -110px;
+    font-family: 'Bela', sans-serif;
+    font-size: 3rem;
+  }
+
+  .textInvite {
+    margin: auto;
+    position: relative;
+    top: -110px;
+    font-size: 16px;
   }
 
   .button {
@@ -127,6 +133,55 @@ body {
     backdrop-filter: blur(4px);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.582);
     cursor: pointer;
+  }
+
+  
+  #countdow-container {
+    display: var(--displayCountdown);
+    flex-wrap: wrap;
+    justify-content: center; 
+  }
+
+  .text {
+    font-weight: bold;
+    font-size: 4rem;
+    line-height: 1;
+    margin: 1rem 2rem;
+  }
+
+  h2 {
+    display: var(--displayCountdown);
+    text-align: center;
+    justify-content: center;
+  }
+
+  .container {
+    position: relative;
+    flex-direction: column;
+    top: 100px;
+    background-image: url(../images/details-flowers.png);
+    backdrop-filter: blur(10px);
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 700px;
+    height: 230px;
+    display: var(--displayCountdown);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.325);
+
+  }
+
+  .countdow {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: solid 1px rgba(0, 0, 0, 0.11);
+    border-radius: 8px;
+    margin: auto 8px auto 8px;
+  }
+  
+  .countdow span {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
   }
 
   @media screen and (min-width: 300px) and (max-width: 720px) {
@@ -150,37 +205,7 @@ body {
       height: 300px;
       display: var(--displayImg);
     }
-  }
 
-  #countdow-container {
-    display: var(--displayCountdown);
-    flex-wrap: wrap;
-    justify-content: center; 
-    margin-top: 4.5rem; 
-  }
-
-  .text {
-    font-weight: bold;
-    font-size: 4rem;
-    line-height: 1;
-    margin: 1rem 2rem;
-  }
-
-  .countdow {
-    text-align: center;
-    background: rgba(255,255,255, 0.35);
-    margin-left: 8px;
-    margin-right: 8px;
-    border: solid 1px rgba(0, 0, 0, 0.35);
-    border-radius: 8px;
-    padding: 0 8px;
-  }
-
-  .countdow span {
-    font-size: 1.3rem;
-  }
-
-  @media screen and (min-width: 300px) and (max-width: 720px) {
     .text {
       font-size: 1.5rem;
       line-height: 0.7;
