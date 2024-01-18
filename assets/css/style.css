@@ -80,6 +80,7 @@ body {
     box-shadow: inset 20px 5px 90px rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   
   
@@ -102,7 +103,7 @@ body {
   h1 {
     margin: auto;
     position: relative;
-    top: 35px;
+    top: 30px;
     font-family: 'Bela', sans-serif;
     font-size: 3.5rem;
   }
@@ -110,7 +111,7 @@ body {
   .textInvite {
     margin: auto;
     position: relative;
-    top: 35px;
+    top: 30px;
     font-size: 16px;
   }
 
@@ -119,7 +120,7 @@ body {
     flex-direction: row;
     justify-content: center;
     position: relative;
-    top: 28px;
+    top: 25px;
   }
 
   .dateInvite {
@@ -166,7 +167,7 @@ body {
   }
 
   .dateDia {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .dateAno {
@@ -175,8 +176,13 @@ body {
     top: -14px;
   }
 
+  .place {
+    position: relative;
+    top: 10px;
+  }
+
   .button {
-    margin-top: 50px;
+    margin-top: 35px;
   }
 
   .click {
@@ -190,6 +196,37 @@ body {
     cursor: pointer;
   }
 
+  #button-links {
+    display: var(--displayCountdown);
+    position: relative;
+    top: 50px;
+    justify-content: center;
+    padding: 45px 0;
+    font-size: 15px;
+    gap: 15px;
+}
+
+#button-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background 0.2s;
+
+}
+
+#button-links a:hover {
+    background: rgba(0, 0, 0, 0.1);
+    
+    
+}
+
+.imgLinks {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
   
   #countdow-container {
     display: var(--displayCountdown);
