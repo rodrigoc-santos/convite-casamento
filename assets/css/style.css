@@ -3,37 +3,44 @@
   src: url(../fonts/bela-yasmine.ttf);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --transformCardFront: none;
+  --displayImg: flex;
+  --heightCardFront: 400px;
+  --heightCardFront2: 280px;
+  --boxShadow: none;
+  --buttonMarginTop: 50px;
+  --displayCountdown: none;
+  --heightBody: 100vh;
+}
+
+.clicked {
+  --transformCardFront: rotateX(160deg);
+  --displayImg: none;
+  --heightCardFront: 350px;
+  --heightCardFront2: 230px;
+  --boxShadow: inset 20px 10px 90px rgba(0,0,0,.15), 0 10px 90px rgba(0,0,0,0.3);
+  --buttonMarginTop: 100px;
+  --displayCountdown: flex;
+  --heightBody: 280vh;
+}
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height:180vh;
+    height:var(--heightBody);
     background-image: url(../images/back-lilas-1.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
 
-  :root {
-    --transformCardFront: none;
-    --displayImg: flex;
-    --heightCardFront: 400px;
-    --heightCardFront2: 280px;
-    --boxShadow: none;
-    --buttonMarginTop: 50px;
-    --displayCountdown: none;
-  }
-
-  .clicked {
-    --transformCardFront: rotateX(160deg);
-    --displayImg: none;
-    --heightCardFront: 350px;
-    --heightCardFront2: 230px;
-    --boxShadow: inset 20px 10px 90px rgba(0,0,0,.15), 0 10px 90px rgba(0,0,0,0.3);
-    --buttonMarginTop: 100px;
-    --displayCountdown: flex;
-  }
 
   /*Create the card container*/
   .birthdayCard {
@@ -161,19 +168,19 @@ body {
   }
 
   .dateMes {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     position: relative;
-    bottom: -14px;
+    bottom: -12px;
   }
 
   .dateDia {
-    font-size: 3.5rem;
+    font-size: 3.1rem;
   }
 
   .dateAno {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     position: relative;
-    top: -14px;
+    top: -12px;
   }
 
   .place {
@@ -203,7 +210,7 @@ body {
     justify-content: center;
     padding: 45px 0;
     font-size: 15px;
-    gap: 15px;
+    gap: 35px;
 }
 
 #button-links a {
@@ -218,13 +225,11 @@ body {
 
 #button-links a:hover {
     background: rgba(0, 0, 0, 0.1);
-    
-    
 }
 
 .imgLinks {
-  width: 100px;
-  height: 100px;
+  width: 86px;
+  height: 86px;
   border-radius: 50%;
 }
   
@@ -275,6 +280,20 @@ body {
     font-size: 1.3rem;
     margin-bottom: 15px;
   }
+
+  .mapBox{
+    display: var(--displayCountdown);
+    position: relative;
+    width: 600px;
+    height: 350px;
+    background: #fff;
+    top: 150px;
+}
+
+.mapBox iframe{
+    width: 100%;
+    height: 100%;
+}
 
   @media screen and (min-width: 300px) and (max-width: 720px) {
     .birthdayCard {
