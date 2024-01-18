@@ -78,6 +78,8 @@ body {
     left:0;
     top:0;
     box-shadow: inset 20px 5px 90px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
   }
   
   
@@ -90,34 +92,87 @@ body {
   
   .verse {
     position: relative;
-    top: -16px;
+    top: 20px;
     width: 490px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
   }
 
-  #BRint {
-    width: 220px;
-    height: 220px;
-    margin: 0 auto;
-    position: relative;
-    top: -60px;
-  }
-
   h1 {
     margin: auto;
     position: relative;
-    top: -110px;
+    top: 35px;
     font-family: 'Bela', sans-serif;
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   .textInvite {
     margin: auto;
     position: relative;
-    top: -110px;
+    top: 35px;
     font-size: 16px;
+  }
+
+  .dataHorario {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    top: 28px;
+  }
+
+  .dateInvite {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #dateweek {
+    margin-right: 18px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+  }
+
+  #dateHour {
+    margin-left: 18px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+  }
+
+  .separador {
+    background-color: black;
+    width: 1px;
+    height: 45px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  #s1 {
+    margin-right: 10px;
+  }
+
+  #s2 {
+    margin-left: 10px;
+  }
+
+  .dateMes {
+    font-size: 1.5rem;
+    position: relative;
+    bottom: -14px;
+  }
+
+  .dateDia {
+    font-size: 4rem;
+  }
+
+  .dateAno {
+    font-size: 1.5rem;
+    position: relative;
+    top: -14px;
   }
 
   .button {
