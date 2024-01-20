@@ -28,403 +28,449 @@ html {
   --buttonMarginTop: 100px;
   --displayCountdown: flex;
   --heightBody: 280vh;
-  --heightBody2: 170vh;
+  --heightBody2: 160vh;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height:var(--heightBody);
-    background-image: url(../images/back-lilas-1.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height:var(--heightBody);
+  background-image: url(../images/back-lilas-1.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
 
-  /*Create the card container*/
-  .weddingCard {
-    position: relative;
-    width: 600px;
-    height:400px;
-    transform-style: preserve-3d;
-    transform: perspective(2500px);
-    transition: 4s;
-    box-shadow: var(--boxShadow);
-  }
+/*Create the card container*/
+.weddingCard {
+  position: relative;
+  width: 600px;
+  height:400px;
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+  transition: 4s;
+  box-shadow: var(--boxShadow);
+}
 
-  .img {
-    display: var(--displayImg);
-  }
+.img {
+  display: var(--displayImg);
+}
 
-  /*Style the front of the card*/
-  .cardFront {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background-image: url(../images/background-lavanda3.png);
-    width: 600px;
-    height: var(--heightCardFront);
-    overflow: hidden;
-    transform-origin: top;
-    transform: var(--transformCardFront);
-    box-shadow: inset 20px 10px 90px rgba(0,0,0,.13), 20px 0 40px rgba(0,0,0,0.1);
-    transition: .6s;
-  }
-  
-  /*Style the inside part of the card*/
-  .cardInside {
-    position: absolute;
-    background-image: url(../images/background-lavanda3.png);
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.6);
-    width: 600px;
-    height:400px;
-    z-index:-1;
-    left:0;
-    top:0;
-    box-shadow: inset 20px 5px 90px rgba(0,0,0,0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  
-  .inside-text {
-    position: relative;
-    transform: scale(0.9);
-    display: flex;
-    flex-direction: column;
-  }
-  
-  p.verse {
-    position: relative;
-    top: 20px;
-    width: 490px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
+/*Style the front of the card*/
+.cardFront {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: url(../images/background-lavanda.png);
+  width: 600px;
+  height: var(--heightCardFront);
+  overflow: hidden;
+  transform-origin: top;
+  transform: var(--transformCardFront);
+  box-shadow: inset 20px 10px 90px rgba(0,0,0,.13), 20px 0 40px rgba(0,0,0,0.1);
+  transition: .6s;
+}
 
-  h1 {
-    margin: auto;
-    position: relative;
-    top: 30px;
-    font-family: 'Bela', sans-serif;
-    font-size: 3.5rem;
-  }
+/*Style the inside part of the card*/
+.cardInside {
+  position: absolute;
+  background-image: url(../images/background-lavanda.png);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 600px;
+  height:400px;
+  z-index:-1;
+  left:0;
+  top:0;
+  box-shadow: inset 20px 5px 90px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .textInvite {
-    margin: auto;
-    position: relative;
-    top: 30px;
-    font-size: 16px;
-  }
 
-  .dataHorario {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: relative;
-    top: 25px;
-  }
+.inside-text {
+  position: relative;
+  transform: scale(0.9);
+  display: flex;
+  flex-direction: column;
+}
 
-  .dateInvite {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
+p.verse {
+  position: relative;
+  top: 20px;
+  width: 490px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 
-  #dateweek {
-    margin-right: 18px;
-    display: flex;
-    align-items: center;
-    font-size: 1.1rem;
-  }
+h1 {
+  margin: auto;
+  position: relative;
+  top: 30px;
+  font-family: 'Bela', sans-serif;
+  font-size: 3.5rem;
+}
 
-  #dateHour {
-    margin-left: 18px;
-    display: flex;
-    align-items: center;
-    font-size: 1.1rem;
-  }
+.textInvite {
+  margin: auto;
+  position: relative;
+  top: 30px;
+  font-size: 16px;
+}
 
-  .separador {
-    background-color: black;
-    width: 1px;
-    height: 45px;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
+.dataHorario {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  top: 25px;
+}
 
-  #s1 {
-    margin-right: 10px;
-  }
+.dateInvite {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 
-  #s2 {
-    margin-left: 10px;
-  }
+#dateweek {
+  margin-right: 18px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
 
-  .dateMes {
-    font-size: 1.3rem;
-    position: relative;
-    bottom: -12px;
-  }
+#dateHour {
+  margin-left: 18px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
 
-  .dateDia {
-    font-size: 3.1rem;
-  }
+.separador {
+  background-color: black;
+  width: 1px;
+  height: 45px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
 
-  .dateAno {
-    font-size: 1.3rem;
-    position: relative;
-    top: -12px;
-  }
+#s1 {
+  margin-right: 10px;
+}
 
-  .place {
-    position: relative;
-    top: 10px;
-  }
+#s2 {
+  margin-left: 10px;
+}
 
-  .button {
-    margin-top: 35px;
-  }
+.dateMes {
+  font-size: 1.3rem;
+  position: relative;
+  bottom: -12px;
+}
 
-  .click {
-    width: 100px;
-    margin: auto;
-    border-radius: 25px;
-    border: 1px solid rgba(0, 0, 0, 0.35);
-    background:rgba(227, 192, 246, 0.1);
-    backdrop-filter: blur(4px);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.582);
-    cursor: pointer;
-  }
+.dateDia {
+  font-size: 3.1rem;
+}
 
-  #button-links {
-    display: var(--displayCountdown);
-    position: relative;
-    top: 25px;
-    justify-content: center;
-    padding: 45px 0;
-    font-size: 15px;
-    gap: 35px;
-  }
+.dateAno {
+  font-size: 1.3rem;
+  position: relative;
+  top: -12px;
+}
+
+.place {
+  position: relative;
+  top: 10px;
+}
+
+.button {
+  margin-top: 35px;
+}
+
+.click {
+  width: 100px;
+  margin: auto;
+  border-radius: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  background:rgba(227, 192, 246, 0.1);
+  backdrop-filter: blur(4px);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.582);
+  cursor: pointer;
+}
+
+#button-links {
+  display: var(--displayCountdown);
+  position: relative;
+  top: 25px;
+  justify-content: center;
+  padding: 45px 0;
+  font-size: 15px;
+  gap: 35px;
+}
 
 #button-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    border-radius: 50%;
-    transition: background 0.2s;
-  }
-  
-  #button-links a:hover {
-    background: rgba(0, 0, 0, 0.1);
-  }
-  
-  .img-back {
-    position: relative;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
 
-  .imgBk {
-    width: 90px;
-    height: 90px;
-  }
+#button-links a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
 
-  .imgLinks {
-    position: absolute;
-    z-index: 1;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.582);
-    border: 1px solid rgba(0, 0, 0, 0.35);
-  }
-  
-  #countdow-container {
-    display: var(--displayCountdown);
-    flex-wrap: wrap;
-    justify-content: center; 
-  }
+.img-back {
+  position: relative;
+}
 
-  .text {
-    font-weight: bold;
-    font-size: 4rem;
-    line-height: 1;
-    margin: 1rem 2rem;
-  }
+.imgBk {
+  width: 90px;
+  height: 90px;
+}
 
-  h2 {
-    display: var(--displayCountdown);
-    text-align: center;
-    justify-content: center;
-  }
+.imgLinks {
+  position: absolute;
+  z-index: 1;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.582);
+  border: 1px solid rgba(0, 0, 0, 0.35);
+}
 
-  .container {
-    position: relative;
-    flex-direction: column;
-    top: 100px;
-    background-image: url(../images/details-flowers.png);
-    backdrop-filter: blur(10px);
-    border: solid 1px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    width: 700px;
-    height: 230px;
-    display: var(--displayCountdown);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.325);
+#countdow-container {
+  display: var(--displayCountdown);
+  flex-wrap: wrap;
+  justify-content: center; 
+}
 
-  }
+.text {
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 1;
+  margin: 1rem 2rem;
+}
 
-  .countdow {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    border: solid 1px rgba(0, 0, 0, 0.11);
-    border-radius: 8px;
-    margin: 0 8px 0 8px;
-  }
-  
-  .countdow span {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-  }
+h2 {
+  display: var(--displayCountdown);
+  text-align: center;
+  justify-content: center;
+}
 
-  .mapBox{
-    display: var(--displayCountdown);
-    position: relative;
-    width: 600px;
-    height: 350px;
-    background: #fff;
-    top: 185px;
+.container {
+  position: relative;
+  flex-direction: column;
+  top: 100px;
+  background-image: url(../images/details-flowers.png);
+  backdrop-filter: blur(10px);
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 700px;
+  height: 230px;
+  display: var(--displayCountdown);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.325);
+
+}
+
+.countdow {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: solid 1px rgba(0, 0, 0, 0.11);
+  border-radius: 8px;
+  margin: 0 8px 0 8px;
+}
+
+.countdow span {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.mapsContainer {
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.325);
+  position: relative;
+  top: 185px;
+  display: var(--displayCountdown);
+  flex-direction: column;
+  justify-content: center;
+  width: 640px;
+  background: transparent;
+  backdrop-filter: blur(10px);
+}
+
+.address {
+  margin: 3px 20px 10px;
+}
+
+.mapBox{
+  position: relative;
+  width: 600px;
+  height: 350px;
+  margin: 0 auto;
+  background: #fff;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 .mapBox iframe{
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
 }
 
-  @media screen and (min-width: 300px) and (max-width: 720px) {
+@media screen and (min-width: 300px) and (max-width: 720px) {
+  
+  body {
+    height: var(--heightBody2);
+    background-image: url(../images/back-lilas-2.jpeg);
     
-    body {
-      height: var(--heightBody2);
-    }
-
-    .weddingCard {
-      width: 360px;
-      height: 260px;
-    }
-
-    .cardFront {
-      width: 360px;
-      height: var(--heightCardFront2);
-    }
-
-    .cardInside {
-      width: 360px;
-      height:260px;
-    }
-
-    .img {
-      width: 300px;
-      height: 300px;
-      display: var(--displayImg);
-    }
-
-    p.verse {
-      width: 380px;
-      top: -5px;
-      font-size: 12px;
-    }
-
-    h1 {
-      top: -5px;
-      font-size: 2.3rem;
-    }
-
-    .textInvite {
-      top: -7px;
-      font-size: 12px;
-      text-align: center;
-    }
-
-    .dataHorario {
-      top: -10px;
-    }
-
-    #dateweek {
-      margin-right: 12px;
-      font-size: 0.8rem;
-    }
-  
-    #dateHour {
-      margin-left: 12px;
-      font-size: 0.8rem;
-    }
-  
-    .separador {
-      height: 33px;
-    }
-  
-    #s1 {
-      margin-right: 8px;
-    }
-  
-    #s2 {
-      margin-left: 8px;
-    }
-  
-    .dateMes {
-      font-size: 1.009rem;
-      bottom: -9px;
-    }
-  
-    .dateDia {
-      font-size: 2.08rem;
-    }
-  
-    .dateAno {
-      font-size: 1.009rem;
-      top: -7px;
-    }
-
-    .text {
-      font-size: 1rem;
-      line-height: 0.4;
-      margin: 0.8rem 1.7rem;
-    }
-
-    #button-links {
-      gap: 15px;
-    }
-
-    .container {
-      height: 122px;
-      width: 370px;
-      top: 55px;
-    }
-  
-    h2 {
-      font-size: 13px;
-    }
-  
-    .countdow span {
-      font-size: 0.8rem;
-      margin-bottom: 16px;
-    }
-  
-    #countdow-container {
-      margin: auto 0; 
-    }
-
-    .countdow {
-      margin: 0 4px 0 4px;
-    }
   }
+
+  .weddingCard {
+    width: 360px;
+    height: 260px;
+  }
+
+  .cardFront {
+    width: 360px;
+    height: var(--heightCardFront2);
+    background-size: 100% 100%;
+  }
+
+  .cardInside {
+    width: 360px;
+    height:260px;
+    background-size: 100% 100%;
+  }
+
+  .img {
+    width: 300px;
+    height: 300px;
+    display: var(--displayImg);
+  }
+
+  p.verse {
+    width: 380px;
+    top: 8px;
+    font-size: 12px;
+  }
+
+  h1 {
+    top: 26px;
+    font-size: 2.3rem;
+  }
+
+  .textInvite {
+    top: 28px;
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .dataHorario {
+    top: 25px;
+  }
+
+  #dateweek {
+    margin-right: 12px;
+    font-size: 0.7rem;
+  }
+
+  #dateHour {
+    margin-left: 12px;
+    font-size: 0.7rem;
+  }
+
+  .separador {
+    height: 31px;
+  }
+
+  #s1 {
+    margin-right: 8px;
+  }
+
+  #s2 {
+    margin-left: 8px;
+  }
+
+  .dateMes {
+    font-size: 0.92rem;
+    bottom: -6px;
+  }
+
+  .dateDia {
+    font-size: 2rem;
+  }
+
+  .dateAno {
+    font-size: 0.92rem;
+    top: -5px;
+  }
+
+  .place {
+    top: 15px;
+    font-size: 0.68rem;
+  }
+
+  .text {
+    font-size: 1.2rem;
+    line-height: 0.4;
+    margin: 0.8rem 1.7rem;
+  }
+
+  #button-links {
+    gap: 15px;
+  }
+
+  .container {
+    height: 122px;
+    width: 370px;
+    top: 55px;
+    background-size: 100% 100%;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  .countdow span {
+    font-size: 0.8rem;
+    margin-bottom: 16px;
+  }
+
+  #countdow-container {
+    margin: auto 0;
+    position: relative;
+    top: -8px;
+  }
+
+  .countdow {
+    margin: 0 4px 0 4px;
+  }
+
+  .address {
+    font-size: 11px;
+  }
+
+  .mapsContainer {
+    top: 115px;
+    width: 395px;
+  }
+
+  .mapBox{
+    width: 370px;
+    height: 290px;
+  }
+}
 
   
