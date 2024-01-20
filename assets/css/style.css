@@ -11,22 +11,24 @@ html {
   --transformCardFront: none;
   --displayImg: flex;
   --heightCardFront: 400px;
-  --heightCardFront2: 280px;
+  --heightCardFront2: 260px;
   --boxShadow: none;
   --buttonMarginTop: 50px;
   --displayCountdown: none;
   --heightBody: 100vh;
+  --heightBody2: 100vh;
 }
 
 .clicked {
   --transformCardFront: rotateX(160deg);
   --displayImg: none;
   --heightCardFront: 350px;
-  --heightCardFront2: 230px;
+  --heightCardFront2: 220px;
   --boxShadow: inset 20px 10px 90px rgba(0,0,0,.15), 0 10px 90px rgba(0,0,0,0.3);
   --buttonMarginTop: 100px;
   --displayCountdown: flex;
   --heightBody: 280vh;
+  --heightBody2: 170vh;
 }
 
 body {
@@ -43,7 +45,7 @@ body {
 
 
   /*Create the card container*/
-  .birthdayCard {
+  .weddingCard {
     position: relative;
     width: 600px;
     height:400px;
@@ -98,7 +100,7 @@ body {
     flex-direction: column;
   }
   
-  .verse {
+  p.verse {
     position: relative;
     top: 20px;
     width: 490px;
@@ -211,7 +213,7 @@ body {
     padding: 45px 0;
     font-size: 15px;
     gap: 35px;
-}
+  }
 
 #button-links a {
     display: flex;
@@ -285,7 +287,7 @@ body {
     backdrop-filter: blur(10px);
     border: solid 1px rgba(0, 0, 0, 0.11);
     border-radius: 8px;
-    margin: auto 8px auto 8px;
+    margin: 0 8px 0 8px;
   }
   
   .countdow span {
@@ -299,7 +301,7 @@ body {
     width: 600px;
     height: 350px;
     background: #fff;
-    top: 150px;
+    top: 185px;
 }
 
 .mapBox iframe{
@@ -308,19 +310,24 @@ body {
 }
 
   @media screen and (min-width: 300px) and (max-width: 720px) {
-    .birthdayCard {
-      width: 380px;
-      height: 280px;
+    
+    body {
+      height: var(--heightBody2);
+    }
+
+    .weddingCard {
+      width: 360px;
+      height: 260px;
     }
 
     .cardFront {
-      width: 380px;
+      width: 360px;
       height: var(--heightCardFront2);
     }
 
     .cardInside {
-      width: 380px;
-      height:280px;
+      width: 360px;
+      height:260px;
     }
 
     .img {
@@ -329,9 +336,95 @@ body {
       display: var(--displayImg);
     }
 
+    p.verse {
+      width: 380px;
+      top: -5px;
+      font-size: 12px;
+    }
+
+    h1 {
+      top: -5px;
+      font-size: 2.3rem;
+    }
+
+    .textInvite {
+      top: -7px;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .dataHorario {
+      top: -10px;
+    }
+
+    #dateweek {
+      margin-right: 12px;
+      font-size: 0.8rem;
+    }
+  
+    #dateHour {
+      margin-left: 12px;
+      font-size: 0.8rem;
+    }
+  
+    .separador {
+      height: 33px;
+    }
+  
+    #s1 {
+      margin-right: 8px;
+    }
+  
+    #s2 {
+      margin-left: 8px;
+    }
+  
+    .dateMes {
+      font-size: 1.009rem;
+      bottom: -9px;
+    }
+  
+    .dateDia {
+      font-size: 2.08rem;
+    }
+  
+    .dateAno {
+      font-size: 1.009rem;
+      top: -7px;
+    }
+
     .text {
-      font-size: 1.5rem;
-      line-height: 0.7;
-      margin: 1rem 2rem;
+      font-size: 1rem;
+      line-height: 0.4;
+      margin: 0.8rem 1.7rem;
+    }
+
+    #button-links {
+      gap: 15px;
+    }
+
+    .container {
+      height: 122px;
+      width: 370px;
+      top: 55px;
+    }
+  
+    h2 {
+      font-size: 13px;
+    }
+  
+    .countdow span {
+      font-size: 0.8rem;
+      margin-bottom: 16px;
+    }
+  
+    #countdow-container {
+      margin: auto 0; 
+    }
+
+    .countdow {
+      margin: 0 4px 0 4px;
     }
   }
+
+  
