@@ -39,3 +39,15 @@ function toogleMode() {
         button.textContent = 'Open'
     }
 }
+
+function copiarTexto() {
+    const texto = document.getElementById("textocopy")
+    const areaDeTextoTemp = document.createElement("textarea")
+    areaDeTextoTemp.value = texto.innerText
+    document.body.appendChild(areaDeTextoTemp)
+    areaDeTextoTemp.select()
+    document.execCommand("copy")
+    document.body.removeChild(areaDeTextoTemp)
+    alert("Texto copiado: " + texto.innerText)
+  }
+  
