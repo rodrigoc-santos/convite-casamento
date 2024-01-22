@@ -450,7 +450,7 @@ h2 {
 
   .container {
     height: 122px;
-    width: 370px;
+    width: 360px;
     top: 55px;
     background-size: 100% 100%;
   }
@@ -486,11 +486,11 @@ h2 {
 
   .mapsContainer {
     top: 115px;
-    width: 395px;
+    width: 360px;
   }
 
   .mapBox{
-    width: 370px;
+    width: 350px;
     height: 290px;
   }
 }
