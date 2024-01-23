@@ -310,9 +310,10 @@ h2 {
 }
 
 .address {
-  margin: 3px 20px 10px;
+  margin: 3px 10px 10px 15px;
   display: flex;
   flex-direction: row;
+  width: 90%;
 }
 
 .buttonCopy {
@@ -331,7 +332,7 @@ h2 {
 
 .mapBox{
   position: relative;
-  width: 600px;
+  width: 95%;
   height: 350px;
   margin: 0 auto;
   background: #fff;
@@ -475,11 +476,15 @@ h2 {
   }
 
   .address {
-    font-size: 11px;
+    font-size: 10px;
+  }
+
+  .h3 {
+    width: 80%;
   }
 
   .buttonCopy {
-    top: 6px;
+    top: 5px;
     width: 18px;
     height: 18px;
   }
@@ -490,7 +495,7 @@ h2 {
   }
 
   .mapBox{
-    width: 350px;
+    width: 95%;
     height: 290px;
   }
 }
