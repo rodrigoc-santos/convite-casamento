@@ -304,7 +304,7 @@ h2 {
   display: var(--displayCountdown);
   flex-direction: column;
   justify-content: center;
-  width: 640px;
+  width: 680px;
   background: transparent;
   backdrop-filter: blur(10px);
 }

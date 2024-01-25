@@ -5,6 +5,10 @@ const secsEL = document.getElementById('secs')
 const html = document.documentElement
 const wedding = '2024-09-13'
 
+function formatTime(time) {
+    return time < 10 ? `0${time}` : time
+}
+
 function countdow () {
     const weddingDate = new Date(wedding)
     const currentDate = new Date()
@@ -21,23 +25,19 @@ function countdow () {
     secsEL.innerHTML = formatTime(seconds)
 }
 
-function formatTime(time) {
-    return time < 10 ? `0${time}` : time
-}
-
 countdow()
 setInterval(countdow, 1000)
 
-
 function toogleMode() {
     html.classList.toggle('clicked')
-
+    
     const button = document.getElementById('botao')
     if(html.classList.contains('clicked')) {
         button.textContent = 'Close'
     } else {
         button.textContent = 'Open'
     }
+
 }
 
 function copiarTexto() {
