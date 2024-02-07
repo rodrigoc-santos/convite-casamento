@@ -25,6 +25,10 @@ p {
     text-align: center;
 }
 
+li {
+    cursor: pointer;
+}
+
 @media screen and (min-width: 300px) and (max-width: 720px) {
     body {
         background-image: url(../images/back-lilas-3.png);
