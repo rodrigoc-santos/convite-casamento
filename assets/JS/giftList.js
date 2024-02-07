@@ -10,9 +10,8 @@ function marcar(x) {
     var textoFormatado = palavras.map(function(palavra) {
         return "<del>" + palavra + "</del>";
     })
-    item.innerHTML = textoFormatado.join(" ")
+    item.innerHTML = textoFormatado.join(" ") + ' - Item já selecionado'
     item.id = `gift1.${x}`
-    console.log(id)
 
     localStorage.setItem(id, "marcado");
 }
@@ -33,7 +32,7 @@ window.onload = function() {
             var textoFormatado = palavras.map(function(palavra) {
                 return "<del>" + palavra + "</del>";
             });
-            item.innerHTML = textoFormatado.join(" ");
+            item.innerHTML = textoFormatado.join(" ")
         }
     }
 }
